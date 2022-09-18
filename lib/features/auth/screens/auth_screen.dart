@@ -79,7 +79,7 @@ class _AuthScreenState extends State<AuthScreen> {
               ),
               if (_auth == Auth.signUp)
                 Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   color: GlobalVariables.backgroundColor,
                   child: Form(
                       key: _signUpFormKey,
@@ -107,13 +107,13 @@ class _AuthScreenState extends State<AuthScreen> {
                             height: 8,
                           ),
                           CustomButton(
-                              text: 'Sign Up',
-                              onTap: () {
-                                if (_signUpFormKey.currentState!.validate()) {
-                                  signUpUser();
-                                }
-                                ;
-                              })
+                            text: 'Sign Up',
+                            onTap: () {
+                              if (_signUpFormKey.currentState!.validate()) {
+                                signUpUser();
+                              }
+                            },
+                          )
                         ],
                       )),
                 ),
